@@ -18,7 +18,7 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),shamu)
 
- include $(CLEAR_VARS)
+include $(CLEAR_VARS)
 LOCAL_MODULE := appdirectedsmspermission
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := appdirectedsmspermission/appdirectedsmspermission.apk
@@ -59,6 +59,16 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := GCS
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := GCS/GCS.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := MotoSignatureApp
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := MotoSignatureApp/MotoSignatureApp.apk
@@ -88,7 +98,7 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
-sinclude $(CLEAR_VARS)
+include $(CLEAR_VARS)
 LOCAL_MODULE := VZWAPNService
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := VZWAPNService/VZWAPNService.apk
